@@ -3,7 +3,7 @@
 # [Demonstration Project title]
 
 ## Summary
-| Company Name | [Company](https://website.link) |
+| Company Name | Vikan Estonia AS (https://website.link) |
 | :--- | :--- |
 | Development Team Lead Name | [Dr. John Smith](https://profile.link) |
 | Development Team Lead E-mail | [email@example.com](mailto:email@example.com) |
