@@ -96,7 +96,7 @@ class CAMERA_MANAGER
         int config_gain(const vector<INodeMap*>& node_maps); // Custom Gain
         int config_sensor_shutter_mode(const vector<INodeMap*>& node_maps); // Custom Sensor Shutter Mode
         int config_black_level_clamping_enable(const vector<INodeMap*>& node_maps); // Black Level Clamping
-	    int reset_exposure(const vector<INodeMap*>& node_maps); // Reset Exposure Time
+        int reset_exposure(const vector<INodeMap*>& node_maps); // Reset Exposure Time
 
         // Runs the camera configuration and image acquisition
         int run_multiple_cameras(vector<CameraPtr>& cameras, CameraList& cam_list, unsigned int number_of_cameras, atomic<bool>& global_running, const string& folder_path);
