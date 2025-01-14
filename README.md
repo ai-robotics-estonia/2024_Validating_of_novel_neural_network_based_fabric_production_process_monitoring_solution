@@ -1,10 +1,10 @@
-# [Reducing waste material by detecting defects on a fast-moving fabric knitting line.]
+# Reducing Waste by Detecting Defects on Fast-Moving Fabric Knitting Lines with Object Detection
 
 ## Summary
-| Company Name | [Vikan Estonia AS]|
+| Company Name | [Vikan Estonia AS](https://www.vikan.com/int)|
 | :--- | :--- |
 | Development Team Lead Name | [Kädi Veeroja](https://www.linkedin.com/in/kädi-veeroja/) |
-| Development Team Lead E-mail | [kadi.veeroja@taltech.ee] |
+| Development Team Lead E-mail | kadi.veeroja@taltech.ee |
 | Duration of the Demonstration Project | February 2024 - December 2024 |
 
 # Description
@@ -36,7 +36,7 @@ The challenge was automating the quality control of a specific knitting line to 
 
 Such a solution was suitable for a project, where the goal is to automate quality control and gave more time to train the algorithm and experiment with different camera setups and LED panel lighting and camera settings. The demo project proved that a quality control solution can be built in this form, but there is no analysable result yet, because the efficiency cannot be calculated now, but further development is already in planning.
 
-### Activities implemented and results achieved
+### Activities Implemented and Results Achieved
 First, data research and examination of equipment and software began. For this, it was necessary to go to the factory to better understand, which quality control solution would be suitable for Vikan, and for the installation of the hardware, measurements were also taken from the knitting machine.
 
 Preliminary work was done for a long time, to select which hardware and software to use in the solution. The project mentors were consulted, who confirmed the hardware options, and after that a list of equipment for the procurement was put together.  
@@ -93,7 +93,7 @@ This project used YOLOv8n.
 - [Ultralytics YOLO Docs](https://docs.ultralytics.com/)
 - [Train Yolov8 object detection on a custom dataset](https://www.youtube.com/watch?v=m9fH9OWn8YM)
 
-### Technological Architecture & Results
+### Technological Architecture and Results
 The solution planning began with configuring the camera to display its view on a screen. Once this was set up, the camera, along with its 3D-printed case, was installed onto the prototype frame. Displaying live images enabled adjustments to optimize exposure, gain, and gamma settings, which were fine-tuned using a trackbar.
  
 First testing was on the prototype with red lights. Testing database was made with pictures of the defect mop and correct mop and the code needed to compare all the new pictures to the training dataset. Training was successful as the defect was clearly visible as a red dot on the mop and the training model detected it. Afterwards, different lights were tested, but red LED lights worked best, so the solutions were ready to be field tested for the first time in the factory on the real knitting machine.
