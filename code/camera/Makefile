@@ -14,12 +14,10 @@ BIN = ../../bin
 MKDIR = mkdir -p
 
 # Output binary
-OUTPUTNAME = two_cam_test
+OUTPUTNAME = multiple_camera_acquisition
 
 # Source and object files
 SRC_FILES = $(wildcard ${SDIR}/*.cpp)
-# In case we may need to adjust the order in which object files are passed to the linker
-#SRC_FILES = camera_settings.cpp camera_manager.cpp main.cpp
 OBJ = $(patsubst %.cpp,${ODIR}/%.o,$(notdir ${SRC_FILES}))
 
 # Spinnaker dependencies

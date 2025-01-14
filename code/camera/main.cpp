@@ -71,7 +71,7 @@ int main(int argc, char** argv)
         {
             // Initialize CAMERA_SETTINGS & CAMERA_MANAGER
             CAMERA_SETTINGS camera_settings;
-            CAMERA_MANAGER camera_manager(&camera_settings); // Pass pointer to camera settings object
+            CAMERA_MANAGER camera_manager(&camera_settings);    // Pass reference to the camera settings object
 
             // Load camera configuration from file
             vector<string> file_content = camera_settings.load_from_file("/path/to/database/mono.txt");
@@ -81,7 +81,7 @@ int main(int argc, char** argv)
                 return -1;
             }
 
-            result |= camera_settings.get_values(file_content); // Get values from file content
+            result |= camera_settings.get_values(file_content); // Get values from file content/database
             cout << "Camera configuration loaded successfully.\n";
 
             // Run configuration and image acquisition on multiple cameras
