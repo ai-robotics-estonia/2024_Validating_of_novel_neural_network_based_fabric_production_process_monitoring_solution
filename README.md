@@ -11,63 +11,61 @@
 
 ## Objectives of the Demonstration Project
 
-The primary objective of the project was to enhance the quality control process by automating defect detection in the knitting process. Specifically, the goal was to detect yarn breaks or non-binding of yarns as early as possible, eliminating the need for operators to constantly monitor machines. This objective was divided into two sub-goals:
+The main objective of the project was to contribute to the quality control improvement process. The goal was to automate quality control and detect yarn breaks or non-binding of yarns in the knitting process as soon as possible, so that an operator does not have to constantly monitor yarn breaks next to the machine. Thereby fulfilling two separate sub-goals. 
 
 ### Environmental Goal
-To reduce textile waste generated during production by implementing automated quality control. Scrap products cannot be reused or sold, making them a direct waste with significant environmental impact. Since the materials required to produce mops are primarily synthetic or a blend of organic and synthetic materials, recycling them is either highly challenging or economically unfeasible in the long term.
+Environmental goal: Reducing textile waste generated in the production by automated quality control. The scrap product cannot be reused or sold, so it is a direct waste and has a high environmental impact. The materials needed to produce a mop are largely synthetic or a mixture of organic and synthetic material, which makes recycling very difficult or not beneficial in the long term. 
 
 ### Economic Goal
-To minimize the economic impact of waste materials on the company by addressing multiple factors:
+Economic goal: Large amount of waste material also has a large economic impact on the company in several ways:  
 
-- **Lost work time**: Time spent producing defective products incurs direct costs and delays subsequent production stages.
-- **Lost material**: The cost of materials wasted during production.
-- **Disposal costs**: Scrap fabric must be disposed of, with disposal fees increasing as waste volumes grow.
-- **Competitiveness**: Scrap fabric increases the product's cost price, reducing market competitiveness.
+- **Lost work time**: Time spent producing waste is actively costing the company money and delays in subsequent stages of production due to defect mops cost even more  
+- **Lost material**: Material cost that goes to waste 
+- **Disposal costs**: Scrap fabric must be disposed of and the fee to dispose rises with the amount of waste the production produces
+- **Competitiveness**: The creation of scrap fabric increases the cost price of the product
 
 
-To achieve these goals, a machine vision solution was tested and validated to notify operators of yarn breaks or non-binding of yarns in real time. By shifting defect detection from human operators to cameras, the process became more accurate and efficient. Human operators are prone to errors due to distractions or fatigue, especially when tasked with identifying defects such as missing or knotted threads, some as fine as 0.2 mm in diameter—an almost impossible task for the human eye.
-
-The use of cameras allowed a single operator to oversee multiple knitting machines simultaneously, reducing the workload and labor costs at subsequent production stages. This improvement not only increased the company's competitiveness but also reduced the overall cost of production.
+In order to achieve these goals, we tested and validated a machine vision solution that notifies the operator when it detects that the knitting machine has a yarn break or non-bonding of yarns. Defect detection shifted from humans to cameras, therefore making the detection process more accurate. Mistakes can happen more often when the detection is given to operators due to the human factor (not noticing a defect due to distraction). In addition, the detection process is very energy-consuming and tedious for a person, and sometimes even impossible, because some of the threads used in knitting have a diameter of 0.2 mm, and it is difficult for the human eye to detect the absence of one thread or a knot in the thread. The use of cameras allows one operator to manage several knitting machines at the same time and thus reduces the employer's workload and reduces labor costs in subsequent stages of production as well, increasing the company's competitiveness and reducing overall cost of production. 
 
 ## Activities and Results of the Demonstration Project
 
 ### Challenge
-The challenge was automating the quality control of a specific knitting line to reduce waste material.  During the planning stage the project solution changed and after consulting with the team, we decided to use the YOLO machine learning algorithm to detect the knitting line defects.  YOLO must be trained with images of the correct mop, then it takes a real-time picture of the knitting line on the machine and compares the result with the images of the correct mop.  
+The challenge was automating the quality control of a specific knitting line to reduce waste material.  During the planning stage the project solution changed and after consulting with the team, we decided to use the YOLO machine learning algorithm to detect the knitting line defects.  YOLO must be adjusted with images of the correct mop, then it takes a real-time picture of the knitting line on the machine and compares the result with the images of the correct mop.   
 
-Such a solution was suitable for a project, where the goal is to automate quality control and gave more time to train the algorithm and experiment with different camera setups and LED panel lighting and camera settings. The demo project proved that a quality control solution can be built in this form, but there is no analysable result yet, because the efficiency cannot be calculated now, but further development is already in planning.
+Such a solution was suitable for a project, where the goal is to automate quality control and gave more time to train the algorithm and experiment with different camera setups and LED panel lighting and camera settings. The demo project proved that a quality control solution can be built in this form, but there is no analysable result yet, because the efficiency cannot be calculated now, but further refinement is already in planning. 
 
 ### Activities Implemented and Results Achieved
-First, data research and examination of equipment and software began. For this, it was necessary to go to the factory to better understand, which quality control solution would be suitable for Vikan, and for the installation of the hardware, measurements were also taken from the knitting machine.
+First, data research and examination of equipment and software began. For this, it was necessary to go to the factory to better understand, which quality control solution would be suitable for Vikan, and for the installation of the hardware, measurements were also taken from the knitting machine.  
 
 Preliminary work was done for a long time, to select which hardware and software to use in the solution. The project mentors were consulted, who confirmed the hardware options, and after that a list of equipment for the procurement was put together.  
   
-Researching software and talking to software mentors led to the YOLO algorithm, which seemed like a practical choice instead of writing a new machine learning algorithm from scratch. Using YOLO gave more time to modify the solution according to Vikan's wishes.
-
-Before software development started, the initial task was formulated, and a block scheme of the solution was made.
-
-Xavier Jetson, a machine learning computer, was the first hardware piece to set up. Ubuntu version 22 was uploaded on Xavier and a 2 TB SSD card was added to the computer board, for better calculation for capacity.  
-  
-FLIR BlackFly S USB3 Mono cameras were used for detection, and since the software of the camera itself was not compatible with the computer, the Spinnaker SDK was used to better change the camera settings, and it also gave better access to change the camera parameters.  Colour camera was also tested, but it gave better results only on the prototype so in the solution mono cameras are used.  
-  
-On the hardware side, a prototype was built to simulate the factory conditions, and for this an aluminium stand had to be made, in addition the same 3D printed camera attachment as on the factory machine, had to be made for the prototype. The mount consists of a camera socket and an aluminium frame mount that are bolted together.
-
-Since the mop needs to be lit, it was necessary to make a special LED lighting panel. The panel has an RGB led strip, and the panel is also attached to the frame with 3D printed connectors. All 3D models are made with Autodesk Fusion 360 software.
+Researching software and talking to software mentors led to the YOLO algorithm, which seemed like a practical choice instead of writing a new machine learning algorithm from scratch. Using YOLO gave more time to modify the solution according to Vikan's wishes. 
+ 
+Before testing and validating the software, the initial task was formulated, and a block scheme of the solution was made. 
+ 
+Xavier Jetson, a machine learning computer, was the first hardware piece to set up. Ubuntu version 22 was uploaded on Xavier and a 2 TB SSD card was added to the computer board, for better calculation for capacity. 
+   
+FLIR BlackFly S USB3 Mono cameras were used for detection, and since the software of the camera itself was not compatible with the computer, the Spinnaker SDK was used to better change the camera settings, and it also gave better access to change the camera parameters.  Colour camera was also tested, but it gave better results only on the prototype so in the solution mono cameras are used.
+    
+On the hardware side, a prototype was adjusted to simulate the factory conditions, and for this an aluminium stand had to be made, in addition the same 3D printed camera attachment as on the factory machine, had to be made for the prototype. The mount consists of a camera socket and an aluminium frame mount that are bolted together.
+ 
+Since the mop needs to be lit, it was necessary to make a special LED lighting panel. The panel has an RGB led strip, and the panel is also attached to the frame with 3D printed connectors. All 3D models are made with Autodesk Fusion 360 software. 
 
 Next, pictures of the knitting machine were taken in the factory, and with the help of photo geometry, a 3D model of the knitting machine was made, and according to the model, an aluminum frame was modelled, which would fit on top of the factory machine. Using the photo geometry model, the mounts to bolt together the touch display to the electronics box and all of that to the other side of the knitting machine are also 3D printed.
 
-Technologically four codes were written. One code, to create a trackbar to change the parameters of the cameras for changing the picture quality (exposure, gain, gamma). The values are stored in a database. The second code takes pictures of the knitting line, takes the values from the database and creates an image according to the parameters in the first code. A new picture is taken every 3 seconds, a total of 3 pictures are taken, it reduces memory usage and load, so it was a useful choice for us. The third code is the YOLO v8 algorithm to detect the defects and the fourth one controls the LED panel (light intensity and colour).   
+Technologically four codes were tested. One code, to create a trackbar to change the parameters of the cameras for changing the picture quality (exposure, gain, gamma). The values are stored in a database. The second code takes pictures of the knitting line, takes the values from the database and creates an image according to the parameters in the first code. A new picture is taken every 3 seconds, a total of 3 pictures are taken, it reduces memory usage and load, so it was a useful choice for us. The third code is the YOLO v8 algorithm to detect the defects and the fourth one controls the LED panel (light intensity and colour).     
  
-Detection is done by the Ultralytics Yolo v8 algorithm model, which was trained on a database of mop images with bounding boxes around the defects. At first, the algorithm was tested on a prototype and a new code had to be made in the factory from the beginning and a new model trained, because the environmental conditions were too different for the prototype and the solution in the factory.
+Detection is done by the Ultralytics Yolo v8 algorithm model, which was adjusted on a database of mop images with bounding boxes around the defects. At first, the algorithm was tested on a prototype and a new code had to be adjusted in the factory from the beginning and a new model tested, because the environmental conditions were too different for the prototype and the solution in the factory.   
   
-The trained model was exported on Xavier as a TensorRT model, and this model detects the images that the camera takes. The camera saves 3 images in a folder and the algorithm goes through the images, sorts the images into two folders, a correct and a defect mop. According to this, the blue LED on the side of the electronics box is lit (if the mop is correct) and the red LED and sound signal (if the mop is faulty).   
+The model was exported on Xavier as a TensorRT model, and this model detects the images that the camera takes. The camera saves 3 images in a folder and the algorithm goes through the images, sorts the images into two folders, a correct and a defect mop. According to this, the blue LED on the side of the electronics box is lit (if the mop is correct) and the red LED and sound signal (if the mop is faulty).   
   
-When the frame going to the factory was ready, the new 3D printed camera housing and LED panel were attached to the frame, and after that it was possible to go to Vikan to test the primary solution. 
- 
-Once the solution was tested, it was necessary to pack all the electronics into one specially modeled 3D box. The box includes a power supply unit (provides appropriate power to all electronic components (computer, LED, screen), Xavier Jetson machine learning computer (which handles detection), ESP32 (to control the LED panel/intermediate link between the LED panel and the computer), two fans (for cooling), a signal module (to indicate with light and sound whether the mop is correct or faulty). The back panel of the box has connectors so that it is possible to connect the wires conveniently.
+When the frame going to the factory was ready, the new 3D printed camera housing and LED panel were attached to the frame, and after that it was possible to go to Vikan to test the primary solution.
+  
+Once the solution was tested, it was necessary to pack all the electronics into one specially modeled 3D box. The box includes a power supply unit (provides appropriate power to all electronic components (computer, LED, screen), Xavier Jetson machine learning computer (which handles detection), ESP32 (to control the LED panel/intermediate link between the LED panel and the computer), two fans (for cooling), a signal module (to indicate with light and sound whether the mop is correct or faulty). The back panel of the box has connectors so that it is possible to connect the wires conveniently. 
 
-In addition, the touch screen mounts, and screen jig are also 3D printed, as is the stand for the entire electronics housing box, which is also attached to the knitting machine.
+In addition, the touch screen mounts, and screen jig are also 3D printed, as is the stand for the entire electronics housing box, which is also attached to the knitting machine.   
 
-It was necessary to go to the factory several times to train and test the model, and it was also necessary to test the electronics box and other attachments, but even in this respect, the solution was completed on time.
+It was necessary to go to the factory several times to test the model, and it was also necessary to test the electronics box and other attachments, but even in this respect, the solution was completed on time. 
 
 ### Data Sources
 - [Hugging Face](https://huggingface.co/)
